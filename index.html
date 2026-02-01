@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List Cart</title>
+    <!-- style -->
+    <link rel="stylesheet" href="/Css/style.css" />
+    <!-- Script -->
+    <script src="/Js/script.js" defer></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="title">Desserts</h1>
+      <div id="div-items"></div>
+    </div>
+
+    <div id="Carrinho">
+      <h3 id="title-cart">Your Cart (<span id="qnt-items">0</span>)</h3>
+
+      <div id="sem-item">
+        <i id="img-bolo"
+          ><img src="/assets/images/illustration-empty-cart.svg" alt=""
+        /></i>
+        <p id="p-cart">Your added items will appear here</p>
+      </div>
+
+      <div id="com-item">
+        <div id="div-items-description"></div>
+
+        <div id="div-total">
+          <p id="p-total">Order total</p>
+          <h2 id="dolar-h2">
+            $
+            <h2 id="total">0</h2>
+          </h2>
+        </div>
+
+        <div id="div-carbon">
+          <i id="carbon-icon"
+            ><img src="/assets/images/icon-carbon-neutral.svg"
+          /></i>
+          <p id="p-carbon">
+            This is a <span id="carbon">carbon-neutral</span> delivery
+          </p>
+        </div>
+
+        <button id="btn-confirm">Confirme Order</button>
+      </div>
+    </div>
+
+    <div id="container-confirmed">
+      <i id="icon-confirm"
+        ><img src="/assets/images/icon-order-confirmed.svg" alt=""
+      /></i>
+      <h1 id="title-confirm">Order Confirmed</h1>
+      <p id="p-After-Title">We hope you enjoy your food</p>
+
+      <div id="div-description-confirm">
+        <div id="div-items-confirm"></div>
+        <div id="div-total-confirm">
+          <p>Order Total</p>
+          <h2 id="dolar-total-confirm">
+            $
+            <h2 id="total-confirm">0</h2>
+          </h2>
+        </div>
+      </div>
+      <form id="form-submit">
+        <input id="btn-submit" type="submit" value="Start New Order" />
+      </form>
+    </div>
+  </body>
+</html>

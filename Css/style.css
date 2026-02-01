@@ -1,0 +1,453 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(13, 31%, 94%);
+    position: absolute;
+}
+
+@font-face {
+    font-family: "ItalicVar";
+    src: url('/assets/fonts/RedHatText-Italic-VariableFont_wght.ttf') format(truetype);
+}
+
+@font-face {
+    font-family: "varFont";
+    src: url('/assets/fonts/RedHatText-VariableFont_wght.ttf') format(truetype);
+}
+
+#container {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    width: 900px;
+    height: 100vh;
+}
+
+#title {
+    margin-top: 20px;
+    margin-left: 120px;
+    font-family: varFont;
+    color: hsl(14, 65%, 9%);
+
+}
+
+#div-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+    width: 900px;
+    max-width: 80%;
+    height: 90vh;
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+.item {
+    width: 200px;
+    height: 320px;
+}
+
+.img-items {
+    max-width: 200px;
+    border-radius: 10px;
+} 
+
+.button-add {
+    width: 150px;
+    height: 40px;
+    position: relative;
+    bottom: 25px;
+    left: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: varFont;
+    font-weight: 500;
+    border-radius: 20px;
+    border: 1px solid hsl(7, 20%, 60%);
+    background-color: hsl(20, 50%, 98%);
+}
+
+.button-add:hover{
+    background-color: hsl(0, 2%, 91%);
+}
+
+.icon-add {
+    margin: 13px 4px 10px 0;
+}
+
+.button-quanty {
+    width: 150px;
+    height: 40px;
+    position: relative;
+    bottom: 25px;
+    left: 25px;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: hsl(14, 86%, 42%);
+    color: hsl(20, 50%, 98%);
+    border-radius: 20px;
+    border: 0;
+    font-family: varFont;
+    font-weight: 500;
+}
+
+.icons-quanty {
+    border: 1.6px solid hsl(20, 50%, 98%);
+    height: 22px;
+    width: 22px;
+    border-radius:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.espace-description {
+    margin-bottom: 5px;
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+    font-family: varFont;
+}
+
+.type {
+    font-size: 15px;
+    font-weight: 500;
+    color: hsl(14, 25%, 72%);
+}
+
+.name-item {
+    font-weight: 460;
+}
+
+.value {
+    font-weight: 700;
+    color: hsl(14, 86%, 42%);
+}
+
+#Carrinho {
+    height: auto;
+    width: 400px;
+    position: relative;
+    bottom: 100px;
+    left: 100px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: hsl(20, 50%, 98%);
+    border-radius: 20px;
+}
+
+#sem-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title-cart {
+    font-family: varFont;
+    font-weight: 700;
+    color: hsl(14, 86%, 42%);
+    margin-top: 15px;
+    margin-bottom: 50px;
+    margin-right: 225px;
+}
+
+#p-cart {
+    font-family: varFont;
+    color: hsl(14, 25%, 72%);
+}
+
+#com-item {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; 
+    width: 100%;
+    position: relative;
+    bottom: 30px;
+}
+
+#div-items-description {
+    width: 100%;
+    height: 90px;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.description-add {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    border-bottom: 1.8px solid hsla(0, 0%, 20%, 0.525);
+}
+
+.name-add {
+    font-family: varFont;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.font-value{
+    font-family: varFont;
+    font-size: 14px;
+    font-weight: 650;
+}
+
+.quanty-add {
+    color: hsl(14, 86%, 42%);
+}
+
+.value {
+    color: hsl(14, 86%, 42%);;
+}
+
+.dolar{
+    color: hsl(14, 86%, 42%);
+    position: relative;
+    left: 13px;
+    display: flex;
+    flex-direction: row;
+}
+
+.principal-value-add {
+    color: hsla(0, 0%, 2%, 0.489);
+}
+
+.div-valores {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 180px;
+    position: relative;
+    top: 5px;
+    right: 18px;
+}
+
+.btn-delete{
+    width: 16px;
+    height:16px;
+    border-radius: 8px;
+    border: 1px solid hsl(14, 25%, 72%);
+    background-color: hsl(20, 50%, 98%);
+    position: relative;
+    left: 320px;
+    bottom: 20px
+}
+
+.btn-delete:hover {
+    background-color: hsl(0, 0%, 93%);
+    color: hsl(0, 0%, 93%);
+}
+
+#div-total {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+    font-family: varFont;
+    color: rgb(36, 36, 36);
+}
+
+#dolar-h2 {
+    position: relative;
+    left: 90px;
+}
+
+#div-carbon {
+    width: 90%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(13, 31%, 94%);
+    border-radius: 10px;
+    font-family: varFont;
+}
+
+#carbon {
+    font-weight: bold;
+}
+
+#btn-confirm {
+    width: 90%;
+    height: 50px;
+    position: relative;
+    top: 25px;
+    border-radius: 25px;
+    border: none;
+    font-family: varFont;
+    font-weight: 500;
+    font-size: 15px;
+    background-color: hsl(14, 86%, 42%);
+    color: hsl(20, 50%, 98%);
+}
+
+#btn-confirm:hover {
+    background-color: hsl(14, 87%, 37%);            
+}
+
+
+
+#container-confirmed {
+    position: relative;
+    right: 730px;
+    z-index: 1;
+    width: 450px;
+    height: 500px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 40px;
+    background-color: hsl(20, 50%, 98%);
+    border-radius: 20px;
+}
+
+#title-confirm{
+    font-family: varFont;
+    color: hsl(14, 65%, 9%);
+}
+
+#p-After-Title {
+    font-family: varFont;
+}
+
+#div-description-confirm {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: hsl(13, 31%, 94%);
+    border-radius: 20px;
+}
+
+#div-items-confirm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow-y: auto;
+    overflow-x: none;
+    width: 100%;
+    height: 200px;
+}
+
+.items-confirm {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 13px;
+    font-family: varFont;
+    border-bottom: 1px solid hsla(0, 0%, 20%, 0.525);
+    margin-bottom: 5px;
+}
+
+.img-confirm {
+    max-width: 40px;
+    border-radius: 5px;
+}
+
+.description-confirm {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    right: 17px;
+}
+
+.div-valores-confirm {
+    width: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.description-confirm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.description-d {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.dolar-confirm {
+    position: sticky;
+    left: 270px;
+    display: flex;
+    flex-direction: row;
+
+} 
+
+#div-total-confirm {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#div-total-confirm p {
+    font-family: varFont;
+}
+
+#dolar-total-confirm {
+    position: relative;
+    left: 90px;
+    font-family: varFont;
+}
+
+#total-confirm {
+    font-family: varFont;
+}
+
+#btn-submit {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: hsl(14, 86%, 42%);
+    color: #fff;
+    font-family: varFont;
+
+}
+
+#btn-submit:hover {
+    background-color: hsla(14, 86%, 42%, 0.874);
+}
+
+#form-submit {
+    width: 100%;
+}
+
+.name-confirm {
+    font-size: 15px;
+}
